@@ -33,47 +33,17 @@
             tools:ignore="ButtonStyle" />
 
         <Button
-            android:id="@+id/buttonRbr"
+            android:id="@+id/buttonDel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="2dp"
             android:layout_weight="1"
-            android:backgroundTint="#9C27B0"
+            android:backgroundTint="#E91E63"
             android:insetLeft="0dp"
             android:insetTop="0dp"
             android:insetRight="0dp"
             android:insetBottom="0dp"
-            android:text="@string/buttonRBr"
-            android:textSize="@dimen/key_text_size"
-            tools:ignore="ButtonStyle" />
-
-        <Button
-            android:id="@+id/buttonLbr"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="2dp"
-            android:layout_weight="1"
-            android:backgroundTint="#9C27B0"
-            android:insetLeft="0dp"
-            android:insetTop="0dp"
-            android:insetRight="0dp"
-            android:insetBottom="0dp"
-            android:text="@string/buttonLBr"
-            android:textSize="24sp"
-            tools:ignore="ButtonStyle" />
-
-        <Button
-            android:id="@+id/buttonShare"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="2dp"
-            android:layout_weight="1"
-            android:backgroundTint="#9C27B0"
-            android:insetLeft="0dp"
-            android:insetTop="0dp"
-            android:insetRight="0dp"
-            android:insetBottom="0dp"
-            android:text="@string/buttonShare"
+            android:text="@string/buttonDel"
             android:textSize="@dimen/key_text_size"
             tools:ignore="ButtonStyle" />
 
@@ -130,7 +100,7 @@
             tools:ignore="ButtonStyle" />
 
         <Button
-            android:id="@+id/buttonMultiply"
+            android:id="@+id/buttonShare"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="2dp"
@@ -140,7 +110,7 @@
             android:insetTop="0dp"
             android:insetRight="0dp"
             android:insetBottom="0dp"
-            android:text="@string/buttonMultiply"
+            android:text="@string/buttonShare"
             android:textSize="@dimen/key_text_size"
             tools:ignore="ButtonStyle" />
 
@@ -197,7 +167,7 @@
             tools:ignore="ButtonStyle" />
 
         <Button
-            android:id="@+id/buttonPlus"
+            android:id="@+id/buttonMultiply"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="2dp"
@@ -207,7 +177,7 @@
             android:insetTop="0dp"
             android:insetRight="0dp"
             android:insetBottom="0dp"
-            android:text="@string/buttonPlus"
+            android:text="@string/buttonMultiply"
             android:textSize="@dimen/key_text_size"
             tools:ignore="ButtonStyle" />
 
@@ -316,22 +286,6 @@
             tools:ignore="ButtonStyle" />
 
         <Button
-            android:id="@+id/buttonBack"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="2dp"
-            android:layout_weight="1"
-            android:backgroundTint="#4CAF50"
-            android:insetLeft="0dp"
-            android:insetTop="0dp"
-            android:insetRight="0dp"
-            android:insetBottom="0dp"
-            android:textSize="24sp"
-            app:icon="@android:drawable/ic_menu_revert"
-            app:iconGravity="textStart"
-            tools:ignore="ButtonStyle" />
-
-        <Button
             android:id="@+id/buttonEqually"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -342,8 +296,24 @@
             android:insetTop="0dp"
             android:insetRight="0dp"
             android:insetBottom="0dp"
-            android:text="@string/buttonEqually"
+            android:text="@string/buttonEqual"
             android:textSize="@dimen/key_text_size"
+            tools:ignore="ButtonStyle" />
+
+        <Button
+            android:id="@+id/buttonPlus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:layout_weight="1"
+            android:backgroundTint="#9C27B0"
+            android:insetLeft="0dp"
+            android:insetTop="0dp"
+            android:insetRight="0dp"
+            android:insetBottom="0dp"
+            android:text="@string/buttonPlus"
+            android:textSize="24sp"
+            app:iconGravity="textStart"
             tools:ignore="ButtonStyle" />
 
     </LinearLayout>
