@@ -17,6 +17,5 @@
     <string name="buttonMultiply">*</string>
     <string name="buttonShare">/</string>
     <string name="buttonC">C</string>
-    <string name="buttonBack">BC</string>
     <string name="buttonDel">Del</string>
 </resources>
