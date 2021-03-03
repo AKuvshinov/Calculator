@@ -43,145 +43,142 @@ public class MainActivity extends AppCompatActivity {
         Button buttonC = (Button) findViewById(R.id.buttonC);
         Button buttonDel = (Button) findViewById(R.id.buttonDel);
 
-        View.OnClickListener onClickListener = new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                switch (v.getId()) {
-                    case R.id.button0:
-                        curr = curr + "0";
-                        displayOne();
-                        break;
-                    case R.id.button1:
-                        curr = curr + "1";
-                        displayOne();
-                        break;
-                    case R.id.button2:
-                        curr = curr + "2";
-                        displayOne();
-                        break;
-                    case R.id.button3:
-                        curr = curr + "3";
-                        displayOne();
-                        break;
-                    case R.id.button4:
-                        curr = curr + "4";
-                        displayOne();
-                        break;
-                    case R.id.button5:
-                        curr = curr + "5";
-                        displayOne();
-                        break;
-                    case R.id.button6:
-                        curr = curr + "6";
-                        displayOne();
-                        break;
-                    case R.id.button7:
-                        curr = curr + "7";
-                        displayOne();
-                        break;
-                    case R.id.button8:
-                        curr = curr + "8";
-                        displayOne();
-                        break;
-                    case R.id.button9:
-                        curr = curr + "9";
-                        displayOne();
-                        break;
-                    case R.id.buttonPt:
-                        if (curr.isEmpty()) {
-                            curr = "0.";
-                            dot_inserted = true;
+        View.OnClickListener onClickListener = v -> {
+            switch (v.getId()) {
+                case R.id.button0:
+                    curr = curr + "0";
+                    displayOne();
+                    break;
+                case R.id.button1:
+                    curr = curr + "1";
+                    displayOne();
+                    break;
+                case R.id.button2:
+                    curr = curr + "2";
+                    displayOne();
+                    break;
+                case R.id.button3:
+                    curr = curr + "3";
+                    displayOne();
+                    break;
+                case R.id.button4:
+                    curr = curr + "4";
+                    displayOne();
+                    break;
+                case R.id.button5:
+                    curr = curr + "5";
+                    displayOne();
+                    break;
+                case R.id.button6:
+                    curr = curr + "6";
+                    displayOne();
+                    break;
+                case R.id.button7:
+                    curr = curr + "7";
+                    displayOne();
+                    break;
+                case R.id.button8:
+                    curr = curr + "8";
+                    displayOne();
+                    break;
+                case R.id.button9:
+                    curr = curr + "9";
+                    displayOne();
+                    break;
+                case R.id.buttonPt:
+                    if (curr.isEmpty()) {
+                        curr = "0.";
+                        dot_inserted = true;
+                    }
+                    if (!dot_inserted) {
+                        curr = curr + ".";
+                        dot_inserted = true;
+                    }
+                    displayOne();
+                    break;
+                case R.id.buttonC:
+                    clear();
+                    displayOne();
+                    displayTwo();
+                    break;
+                case R.id.buttonDel:
+                    backspace();
+                    displayOne();
+                    break;
+                case R.id.buttonShare:
+                    dot_inserted = false;
+                    if (!curr.isEmpty()) {
+                        if (curr.substring(curr.length() - 1, curr.length()).equals(".")) {
+                            backspace();
                         }
-                        if (!dot_inserted) {
-                            curr = curr + ".";
-                            dot_inserted = true;
+                        if (!operator_inserted) {
+                            curr = curr + " / ";
+                            operator_inserted = true;
                         }
-                        displayOne();
-                        break;
-                    case R.id.buttonC:
-                        clear();
-                        displayOne();
+                    }
+                    displayOne();
+                    break;
+                case R.id.buttonMultiply:
+                    dot_inserted = false;
+                    if (!curr.isEmpty()) {
+                        if (curr.substring(curr.length() - 1, curr.length()).equals(".")) {
+                            backspace();
+                        }
+                        if (!operator_inserted) {
+                            curr = curr + " * ";
+                            operator_inserted = true;
+                        }
+                    }
+                    displayOne();
+                    break;
+                case R.id.buttonMinus:
+                    dot_inserted = false;
+                    if (!curr.isEmpty()) {
+                        if (curr.substring(curr.length() - 1, curr.length()).equals(".")) {
+                            backspace();
+                        }
+                        if (!operator_inserted) {
+                            curr = curr + " - ";
+                            operator_inserted = true;
+                        }
+                    }
+                    displayOne();
+                    break;
+                case R.id.buttonPlus:
+                    dot_inserted = false;
+                    if (!curr.isEmpty()) {
+                        if (curr.substring(curr.length() - 1, curr.length()).equals(".")) {
+                            backspace();
+                        }
+                        if (!operator_inserted) {
+                            curr = curr + " + ";
+                            operator_inserted = true;
+                        }
+                    }
+                    displayOne();
+                    break;
+                case R.id.buttonEqual:
+                    if (operator_inserted && !curr.substring(curr.length() - 1, curr.length()).equals(" ")) {
+                        String[] tokens = curr.split(" ");
+                        switch (tokens[1].charAt(0)) {
+                            case '+':
+                                res = Double.toString(Double.parseDouble(tokens[0]) + Double.parseDouble(tokens[2]));
+                                break;
+                            case '-':
+                                res = Double.toString(Double.parseDouble(tokens[0]) - Double.parseDouble(tokens[2]));
+                                break;
+                            case '*':
+                                res = Double.toString(Double.parseDouble(tokens[0]) * Double.parseDouble(tokens[2]));
+                                break;
+                            case '/':
+                                res = Double.toString(Double.parseDouble(tokens[0]) / Double.parseDouble(tokens[2]));
+                                break;
+                        }
                         displayTwo();
                         break;
-                    case R.id.buttonDel:
-                        backspace();
-                        displayOne();
-                        break;
-                    case R.id.buttonShare:
-                        dot_inserted = false;
-                        if (!curr.isEmpty()) {
-                            if (curr.substring(curr.length() - 1, curr.length()).equals(".")) {
-                                backspace();
-                            }
-                            if (!operator_inserted) {
-                                curr = curr + " / ";
-                                operator_inserted = true;
-                            }
-                        }
-                        displayOne();
-                        break;
-                    case R.id.buttonMultiply:
-                        dot_inserted = false;
-                        if (!curr.isEmpty()) {
-                            if (curr.substring(curr.length() - 1, curr.length()).equals(".")) {
-                                backspace();
-                            }
-                            if (!operator_inserted) {
-                                curr = curr + " * ";
-                                operator_inserted = true;
-                            }
-                        }
-                        displayOne();
-                        break;
-                    case R.id.buttonMinus:
-                        dot_inserted = false;
-                        if (!curr.isEmpty()) {
-                            if (curr.substring(curr.length() - 1, curr.length()).equals(".")) {
-                                backspace();
-                            }
-                            if (!operator_inserted) {
-                                curr = curr + " - ";
-                                operator_inserted = true;
-                            }
-                        }
-                        displayOne();
-                        break;
-                    case R.id.buttonPlus:
-                        dot_inserted = false;
-                        if (!curr.isEmpty()) {
-                            if (curr.substring(curr.length() - 1, curr.length()).equals(".")) {
-                                backspace();
-                            }
-                            if (!operator_inserted) {
-                                curr = curr + " + ";
-                                operator_inserted = true;
-                            }
-                        }
-                        displayOne();
-                        break;
-                    case R.id.buttonEqual:
-                        if (operator_inserted && !curr.substring(curr.length() - 1, curr.length()).equals(" ")) {
-                            String[] tokens = curr.split(" ");
-                            switch (tokens[1].charAt(0)) {
-                                case '+':
-                                    res = Double.toString(Double.parseDouble(tokens[0]) + Double.parseDouble(tokens[2]));
-                                    break;
-                                case '-':
-                                    res = Double.toString(Double.parseDouble(tokens[0]) - Double.parseDouble(tokens[2]));
-                                    break;
-                                case '*':
-                                    res = Double.toString(Double.parseDouble(tokens[0]) * Double.parseDouble(tokens[2]));
-                                    break;
-                                case '/':
-                                    res = Double.toString(Double.parseDouble(tokens[0]) / Double.parseDouble(tokens[2]));
-                                    break;
-                            }
-                            displayTwo();
-                            break;
-                        }
-                }
-
+                    }
             }
+
         };
         button0.setOnClickListener(onClickListener);
         button1.setOnClickListener(onClickListener);
@@ -205,9 +202,11 @@ public class MainActivity extends AppCompatActivity {
     public void displayOne() {
         calculation.setText(curr);
     }
+
     public void displayTwo() {
         result.setText(res);
     }
+
     public void clear() {
         curr = "";
         res = "";
