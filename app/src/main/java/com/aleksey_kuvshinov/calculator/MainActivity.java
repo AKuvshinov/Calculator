@@ -2,7 +2,6 @@ package com.aleksey_kuvshinov.calculator;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -45,7 +44,6 @@ public class MainActivity extends AppCompatActivity {
         Button buttonDel = (Button) findViewById(R.id.buttonDel);
 
         View.OnClickListener onClickListener = new View.OnClickListener() {
-            @SuppressLint("NonConstantResourceId")
             @Override
             public void onClick(View v) {
                 switch (v.getId()) {

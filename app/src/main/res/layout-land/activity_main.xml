@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,19 +8,16 @@
     android:background="#bbbbbb"
     android:orientation="vertical">
 
-    <Space
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"/>
 
     <EditText
         android:id="@+id/calculation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_weight="1"
         android:layout_marginTop="5dp"
         android:textAlignment="textEnd"
         android:textColor="@color/black"
-        android:textSize="38sp"
+        android:textSize="28sp"
         android:textStyle="bold"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -32,10 +30,11 @@
         android:id="@+id/result"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_weight="1"
         android:layout_marginTop="5dp"
         android:textAlignment="textEnd"
         android:textColor="@color/black"
-        android:textSize="56sp"
+        android:textSize="38sp"
         android:textStyle="bold"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -47,6 +46,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_weight="1"
         android:orientation="horizontal">
 
         <Button
@@ -62,7 +62,7 @@
             android:insetBottom="0dp"
             android:text="@string/buttonC"
             android:textSize="@dimen/key_text_size"
-            tools:ignore="ButtonStyle" />
+            tools:ignore="ButtonStyle,NestedWeights" />
 
         <Button
             android:id="@+id/buttonDel"
@@ -84,6 +84,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_weight="1"
         android:orientation="horizontal">
 
         <Button
@@ -99,7 +100,7 @@
             android:insetBottom="0dp"
             android:text="@string/button7"
             android:textSize="@dimen/key_text_size"
-            tools:ignore="ButtonStyle" />
+            tools:ignore="ButtonStyle,NestedWeights" />
 
         <Button
             android:id="@+id/button8"
@@ -151,6 +152,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_weight="1"
         android:orientation="horizontal">
 
         <Button
@@ -166,7 +168,7 @@
             android:insetBottom="0dp"
             android:text="@string/button4"
             android:textSize="@dimen/key_text_size"
-            tools:ignore="ButtonStyle" />
+            tools:ignore="ButtonStyle,NestedWeights" />
 
         <Button
             android:id="@+id/button5"
@@ -218,6 +220,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_weight="1"
         android:orientation="horizontal">
 
         <Button
@@ -233,7 +236,7 @@
             android:insetBottom="0dp"
             android:text="@string/button1"
             android:textSize="@dimen/key_text_size"
-            tools:ignore="ButtonStyle" />
+            tools:ignore="ButtonStyle,NestedWeights" />
 
         <Button
             android:id="@+id/button2"
@@ -285,6 +288,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_weight="1"
         android:orientation="horizontal">
 
         <Button
@@ -300,7 +304,7 @@
             android:insetBottom="0dp"
             android:text="@string/button0"
             android:textSize="@dimen/key_text_size"
-            tools:ignore="ButtonStyle" />
+            tools:ignore="ButtonStyle,NestedWeights" />
 
         <Button
             android:id="@+id/buttonPt"
