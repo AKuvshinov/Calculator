@@ -2,6 +2,7 @@ package com.aleksey_kuvshinov.calculator;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -10,24 +11,6 @@ import android.widget.EditText;
 public class MainActivity extends AppCompatActivity {
     private EditText calculation, result;
     private String curr, res;
-    private Button button1;
-    private Button button2;
-    private Button button3;
-    private Button button4;
-    private Button button5;
-    private Button button6;
-    private Button button7;
-    private Button button8;
-    private Button button9;
-    private Button button0;
-    private Button buttonPt;
-    private Button buttonEqual;
-    private Button buttonPlus;
-    private Button buttonMinus;
-    private Button buttonMultiply;
-    private Button buttonShare;
-    private Button buttonC;
-    private Button buttonDel;
     private boolean dot_inserted, operator_inserted;
 
     @Override
@@ -42,26 +25,27 @@ public class MainActivity extends AppCompatActivity {
         dot_inserted = false;
         operator_inserted = false;
 
-        button1 = (Button) findViewById(R.id.button1);
-        button2 = (Button) findViewById(R.id.button2);
-        button3 = (Button) findViewById(R.id.button3);
-        button4 = (Button) findViewById(R.id.button4);
-        button5 = (Button) findViewById(R.id.button5);
-        button6 = (Button) findViewById(R.id.button6);
-        button7 = (Button) findViewById(R.id.button7);
-        button8 = (Button) findViewById(R.id.button8);
-        button9 = (Button) findViewById(R.id.button9);
-        button0 = (Button) findViewById(R.id.button0);
-        buttonPt = (Button) findViewById(R.id.buttonPt);
-        buttonMultiply = (Button) findViewById(R.id.buttonMultiply);
-        buttonShare = (Button) findViewById(R.id.buttonShare);
-        buttonMinus = (Button) findViewById(R.id.buttonMinus);
-        buttonPlus = (Button) findViewById(R.id.buttonPlus);
-        buttonEqual = (Button) findViewById(R.id.buttonEqual);
-        buttonC = (Button) findViewById(R.id.buttonC);
-        buttonDel = (Button) findViewById(R.id.buttonDel);
+        Button button1 = (Button) findViewById(R.id.button1);
+        Button button2 = (Button) findViewById(R.id.button2);
+        Button button3 = (Button) findViewById(R.id.button3);
+        Button button4 = (Button) findViewById(R.id.button4);
+        Button button5 = (Button) findViewById(R.id.button5);
+        Button button6 = (Button) findViewById(R.id.button6);
+        Button button7 = (Button) findViewById(R.id.button7);
+        Button button8 = (Button) findViewById(R.id.button8);
+        Button button9 = (Button) findViewById(R.id.button9);
+        Button button0 = (Button) findViewById(R.id.button0);
+        Button buttonPt = (Button) findViewById(R.id.buttonPt);
+        Button buttonMultiply = (Button) findViewById(R.id.buttonMultiply);
+        Button buttonShare = (Button) findViewById(R.id.buttonShare);
+        Button buttonMinus = (Button) findViewById(R.id.buttonMinus);
+        Button buttonPlus = (Button) findViewById(R.id.buttonPlus);
+        Button buttonEqual = (Button) findViewById(R.id.buttonEqual);
+        Button buttonC = (Button) findViewById(R.id.buttonC);
+        Button buttonDel = (Button) findViewById(R.id.buttonDel);
 
         View.OnClickListener onClickListener = new View.OnClickListener() {
+            @SuppressLint("NonConstantResourceId")
             @Override
             public void onClick(View v) {
                 switch (v.getId()) {
