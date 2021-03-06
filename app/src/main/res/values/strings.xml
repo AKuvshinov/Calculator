@@ -18,4 +18,7 @@
     <string name="buttonShare">/</string>
     <string name="buttonC">C</string>
     <string name="buttonDel">Del</string>
+    <string name="my_cool_style">My cool style</string>
+    <string name="switch1">Переключить тему</string>
+
 </resources>
