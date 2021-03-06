@@ -13,7 +13,7 @@
         android:layout_height="0dp"
         android:layout_weight="1"/>
 
-    <EditText
+    <com.google.android.material.textfield.TextInputEditText
         style="@style/viewCalculation"
         android:id="@+id/calculation"
         android:textSize="38sp"
@@ -21,7 +21,7 @@
         android:autofillHints=""
         tools:ignore="LabelFor" />
 
-    <EditText
+    <com.google.android.material.textfield.TextInputEditText
         style="@style/viewResult"
         android:id="@+id/result"
         android:textSize="56sp"
@@ -34,14 +34,14 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             style="@style/numberC"
             android:id="@+id/buttonC"
             android:text="@string/buttonC"
             android:textSize="@dimen/key_text_size"
             tools:ignore="ButtonStyle" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             style="@style/numberC"
             android:id="@+id/buttonDel"
             android:text="@string/buttonDel"
@@ -55,28 +55,28 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             style="@style/numberButton"
             android:id="@+id/button7"
             android:text="@string/button7"
             android:textSize="@dimen/key_text_size"
             tools:ignore="ButtonStyle" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             style="@style/numberButton"
             android:id="@+id/button8"
             android:text="@string/button8"
             android:textSize="@dimen/key_text_size"
             tools:ignore="ButtonStyle" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             style="@style/numberButton"
             android:id="@+id/button9"
             android:text="@string/button9"
             android:textSize="@dimen/key_text_size"
             tools:ignore="ButtonStyle" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             style="@style/numberAction"
             android:id="@+id/buttonShare"
             android:text="@string/buttonShare"
@@ -90,28 +90,28 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             style="@style/numberButton"
             android:id="@+id/button4"
             android:text="@string/button4"
             android:textSize="@dimen/key_text_size"
             tools:ignore="ButtonStyle" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             style="@style/numberButton"
             android:id="@+id/button5"
             android:text="@string/button5"
             android:textSize="@dimen/key_text_size"
             tools:ignore="ButtonStyle" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             style="@style/numberButton"
             android:id="@+id/button6"
             android:text="@string/button6"
             android:textSize="@dimen/key_text_size"
             tools:ignore="ButtonStyle" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             style="@style/numberAction"
             android:id="@+id/buttonMultiply"
             android:text="@string/buttonMultiply"
@@ -125,28 +125,28 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             style="@style/numberButton"
             android:id="@+id/button1"
             android:text="@string/button1"
             android:textSize="@dimen/key_text_size"
             tools:ignore="ButtonStyle" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             style="@style/numberButton"
             android:id="@+id/button2"
             android:text="@string/button2"
             android:textSize="@dimen/key_text_size"
             tools:ignore="ButtonStyle" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             style="@style/numberButton"
             android:id="@+id/button3"
             android:text="@string/button3"
             android:textSize="@dimen/key_text_size"
             tools:ignore="ButtonStyle" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             style="@style/numberAction"
             android:id="@+id/buttonMinus"
             android:text="@string/buttonMinus"
@@ -160,28 +160,28 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             style="@style/numberButton"
             android:id="@+id/button0"
             android:text="@string/button0"
             android:textSize="@dimen/key_text_size"
             tools:ignore="ButtonStyle" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             style="@style/numberButton"
             android:id="@+id/buttonPt"
             android:text="@string/buttonPt"
             android:textSize="@dimen/key_text_size"
             tools:ignore="ButtonStyle" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             style="@style/numberEqual"
             android:id="@+id/buttonEqual"
             android:text="@string/buttonEqual"
             android:textSize="@dimen/key_text_size"
             tools:ignore="ButtonStyle" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             style="@style/numberAction"
             android:id="@+id/buttonPlus"
             android:text="@string/buttonPlus"
