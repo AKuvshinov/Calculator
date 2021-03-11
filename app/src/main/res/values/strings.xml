@@ -20,5 +20,7 @@
     <string name="buttonDel">Del</string>
     <string name="my_cool_style">My cool style</string>
     <string name="switch1">Переключить тему</string>
+    <string name="action_settings">Settings</string>
+    <string name="back">Back</string>
 
 </resources>

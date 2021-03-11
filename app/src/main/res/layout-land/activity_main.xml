@@ -7,17 +7,11 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <com.google.android.material.switchmaterial.SwitchMaterial
-        android:id="@+id/switch1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:text="@string/switch1" />
 
     <com.google.android.material.textfield.TextInputEditText
         style="@style/viewCalculation"
         android:id="@+id/calculation"
-        android:textSize="24sp"
+        android:textSize="32sp"
         android:layout_weight="1"
         android:inputType="numberDecimal"
         android:autofillHints=""
@@ -26,7 +20,7 @@
     <com.google.android.material.textfield.TextInputEditText
         style="@style/viewCalculation"
         android:id="@+id/result"
-        android:textSize="36sp"
+        android:textSize="42sp"
         android:layout_weight="1"
         android:inputType="numberDecimal"
         android:autofillHints=""
