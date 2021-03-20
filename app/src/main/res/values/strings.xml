@@ -11,13 +11,11 @@
     <string name="button9">9</string>
     <string name="button0">0</string>
     <string name="buttonPt">.</string>
-    <string name="buttonEqually">=</string>
+    <string name="buttonEqual">=</string>
     <string name="buttonPlus">+</string>
     <string name="buttonMinus">-</string>
     <string name="buttonMultiply">*</string>
     <string name="buttonShare">/</string>
-    <string name="buttonRBr">(</string>
-    <string name="buttonLBr">)</string>
     <string name="buttonC">C</string>
-    <string name="buttonBack">BC</string>
+    <string name="buttonDel">Del</string>
 </resources>
