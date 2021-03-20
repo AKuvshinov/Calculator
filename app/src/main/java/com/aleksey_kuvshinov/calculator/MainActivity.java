@@ -1,28 +1,55 @@
 package com.aleksey_kuvshinov.calculator;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
+import androidx.appcompat.widget.SwitchCompat;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity {
+    public static final String MY_PREFERENCES = "nightModePreferences";
+    public static final String KEY_NIGHT_MODE = "nightMode";
     private EditText calculation, result;
     private String curr, res;
     private boolean dot_inserted, operator_inserted;
+    SwitchCompat changeTheme;
+    SharedPreferences sharedPreferences;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        sharedPreferences = getSharedPreferences(MY_PREFERENCES, Context.MODE_PRIVATE);
+
+        changeTheme = findViewById(R.id.switch1);
         calculation = (EditText) findViewById(R.id.calculation);
         result = (EditText) findViewById(R.id.result);
         curr = "";
         res = "";
         dot_inserted = false;
         operator_inserted = false;
+
+        checkNightModeActivated();
+
+        changeTheme.setOnCheckedChangeListener((buttonView, isChecked) -> {
+            if (isChecked) {
+                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+                saveNightModeState(true);
+            } else {
+                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+                saveNightModeState(false);
+            }
+            recreate();
+        });
 
         Button button1 = (Button) findViewById(R.id.button1);
         Button button2 = (Button) findViewById(R.id.button2);
@@ -199,6 +226,23 @@ public class MainActivity extends AppCompatActivity {
         buttonPlus.setOnClickListener(onClickListener);
         buttonEqual.setOnClickListener(onClickListener);
     }
+
+    private void saveNightModeState(boolean nightMode) {
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putBoolean(KEY_NIGHT_MODE, nightMode).apply();
+    }
+
+    public void checkNightModeActivated() {
+        if (sharedPreferences.getBoolean(KEY_NIGHT_MODE, false)) {
+            changeTheme.setChecked(true);
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+        } else {
+            changeTheme.setChecked(false);
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+        }
+    }
+
+
     public void displayOne() {
         calculation.setText(curr);
     }
@@ -226,4 +270,5 @@ public class MainActivity extends AppCompatActivity {
             }
         }
     }
+
 }
